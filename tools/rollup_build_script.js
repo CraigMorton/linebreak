@@ -33,7 +33,7 @@ for (const config of bundles) {
     plugins: plugins
   }))
   .then(bundle => bundle.write({
-    dest: `dist/${pkg.name}${config.ext}`,
+    dest: `dist/linebreak${config.ext}`,
     format: config.format,
     moduleName: config.moduleName,
     sourceMap: false,

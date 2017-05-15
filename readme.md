@@ -1,5 +1,8 @@
 # linebreak
-An implementation of the Unicode Line Breaking Algorithm (UAX #14)
+A browser-friendly implementation of the Unicode Line Breaking Algorithm (UAX #14)
+
+This is a [fork](https://github.com/CraigMorton/linebreak) of the [original linebreak package](https://github.com/devongovett/linebreak) which removes the need for node's 'fs' module at build-time and produces bundled code, in both UMD and es2015 modules format, that is ready for use in client-side projects.
+
 
 > Line breaking, also known as word wrapping, is the process of breaking a section of text into lines such that it will fit in the
 > available width of a page, window or other display area. The Unicode Line Breaking Algorithm performs part of this process. 
@@ -15,14 +18,12 @@ visual appearance or layout of text, it could be used for other things as well.
 
 ## Installation
 
-You can install via npm
-
-    npm install linebreak
+This fork is published on npm as [@craigmorton/linebreak](https://www.npmjs.com/package/@craigmorton/linebreak). You can install the forked version using `npm install --save @craigmorton/linebreak`
 
 ## Example
 
 ```javascript
-var LineBreaker = require('linebreak');
+var LineBreaker = require('@craigmorton/linebreak');
 
 var lorem = 'lorem ipsum...';
 var breaker = new LineBreaker(lorem);
