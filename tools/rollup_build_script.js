@@ -3,17 +3,17 @@ const pkg = require('../package.json')
 const del = require('del')
 
 const coffeescript = require('rollup-plugin-coffee-script')
-const babel = require('rollup-plugin-babel')
 const nodeResolve = require('rollup-plugin-node-resolve')
+const commonjs = require('rollup-plugin-commonjs')
 const browserifyPlugin = require('rollup-plugin-browserify-transform')
 const brfsBabel = require('brfs-babel')
 const minify = require('rollup-plugin-babili')
 
 const plugins = [
   coffeescript(),
-  babel({plugins:['transform-commonjs-es2015-modules']}),
   nodeResolve({extensions: ['.js', '.coffee']}),
-  // browserifyPlugin / brfsBabel seems to break source maps
+  commonjs({extensions: ['.js', '.coffee']}),
+  // brfsBabel breaks source maps
   browserifyPlugin(brfsBabel, {exclude: 'node_modules/**'}),
   minify({comments: false}),
 ]

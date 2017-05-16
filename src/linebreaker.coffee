@@ -1,6 +1,6 @@
-`import UnicodeTrie from 'unicode-trie'`
+UnicodeTrie = require 'unicode-trie'
 `import fs from 'fs'`
-`import base64 from 'base64-js'`
+base64 = require 'base64-js'
 `import {BK, CR, LF, NL, CB, BA, SP, WJ, AI, AL, SA, SG, XX, CJ, ID, NS} from './classes'`
 `import {DI_BRK, IN_BRK, CI_BRK, CP_BRK, PR_BRK, pairTable} from './pairs'`
 
