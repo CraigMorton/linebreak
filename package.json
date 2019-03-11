@@ -1,6 +1,6 @@
 {
   "name": "@craigmorton/linebreak",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "description": "A browser-friendly implementation of the Unicode Line Breaking Algorithm (UAX #14)",
   "repository": {
     "type": "git",

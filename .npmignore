@@ -2,3 +2,4 @@ src/
 test/
 tools/
 .gitignore
+package-lock.json
